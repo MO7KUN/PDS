@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Info de Voiture</title>
+</head>
+
+<body>
+  <header class="bg-secondary">
+    <div class="container text-white d-flex flex-row align-items-center">
+      <h1 class="font-weight-bold p-4">Bouamama Cars</h1>
+      <a href="Voitures.html" class=" p-2">Voitures </a>
+      <a href="Clients.html" class=" p-2">Clients </a>
+      <a href="Location.html" class=" p-2">Location </a>
+    </div>
+  </header>
+  <header class="bg-primary">
+    <div class="container text-black-50 font-weight-bold margin margin2" id="carName">
+
+    </div>
+  </header>
+  <header class="bg-secondary">
+    <div class="container text-white d-flex flex-row align-items-center">
+      <img src="" alt="" class="img" id="carImg">
+      <div class="container">
+        <p class="font-weight-bold text" id="carNameHeader">
+
+        </p>
+        <span class="font-weight-light" id="matricule">
+
+        </span>
+      </div>
+      <div class="container "><a href="add-car.html"><button class="bg-success text-white margin3">Modifier les
+            informations</button></a></div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Matricule
+        </p>
+        <span id="matriculeSpan">
+
+        </span>
+      </div>
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Nom
+        </p>
+        <span id="carNameSpan">
+
+        </span>
+      </div>
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Mark
+        </p>
+        <span id="carMark">
+
+        </span>
+      </div>
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Model
+        </p>
+        <span id="carModel">
+
+        </span>
+      </div>
+
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Carburant
+        </p>
+        <span id="carCarburant">
+
+        </span>
+      </div>
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Status
+        </p>
+        <span id="carStatus">
+
+        </span>
+      </div>
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Service
+        </p>
+        <span id="carService">
+
+        </span>
+      </div>
+      <div class="col-3 text-center column margin">
+        <p class="text-black-50 font-weight-bold">
+          Conversion
+        </p>
+        <span id="carConversion">
+
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="container margin">
+    <div class="container d-flex flex-row align-items-center justify-content-between">
+      <p class=" text font-weight-bold">
+        Historique d'allocation
+      </p>
+      <form action="">
+        <input type="text" name="" id="label" class="radius border" placeholder="Chercher">
+      </form>
+    </div>
+    <table class="table table-bordered table-striped" id="historique">
+
+    </table>
+  </div>
+  <div class="container margin">
+    <div class="container">
+      <p class=" text font-weight-bold">
+        Statistiques
+      </p>
+      <div>
+        <div class="card text-center border border-1">
+          <div class="card-body">
+            <h5 class="card-subtitle text-success">Total gagné</h5>
+            <h4 class="card-title font-weight-bold text-black-50" id="totalGaner">$xxxx.xx</h4>
+          </div>
+        </div>
+
+        <div class="card text-center border border-1">
+          <div class="card-body">
+            <h5 class="card-subtitle text-success">Total Nombre des jours</h5>
+            <h4 class="card-title font-weight-bold text-black-50" id="nbreJrs">$nbr</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="voiture.js"></script>
+</body>
+
+</html>

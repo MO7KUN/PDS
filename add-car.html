@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Bouamama Cars</title>
+    </head>
+
+    <body>
+        <header class="bg-secondary">
+            <div class="container text-white d-flex flex-row
+                align-items-center">
+                <h1 class="font-weight-bold p-4">Bouamama Cars</h1>
+                <div>
+                    <a href="Voitures.html" class=" p-2">Voitures </a>
+                    <a href="Clients.html" class=" p-2">Clients </a>
+                    <a href="Location.html" class=" p-2">Location </a>
+                </div>
+            </div>
+        </header>
+        <div class="container margin">
+            <form action="" class="row">
+                <label for="Matricule" class="bb margin">Matricule :</label>
+                <input name="Matricule" type="text" placeholder=" Matricule"
+                    class="bb margin
+                    border">
+                <label for="Nom" class="bb margin">Nom :</label>
+                <input name="Nom" type="text" placeholder=" Nom" class="bb
+                    margin border">
+                <label for="Mark" class="bb margin">Mark :</label>
+                <select name="Mark" id="Mark" class="bb margin border">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <label for="Model" class="bb margin">Model :</label>
+                <input name="Model" type="text" placeholder=" Model" class="bb
+                    margin
+                    border">
+                <label for="Carburant" class="bb margin">Carburant :</label>
+                <select name="Carburant" id="Carburant" class="bb margin
+                    border">
+                    <option value="Essence">Essence</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+                <label for="Status" class="bb margin">Status :</label>
+                <select name="Status" id="Status" class="bb margin
+                    border">
+                    <option value="Disponible">Disponible</option>
+                    <option value="prete">prêté</option>
+                </select>
+                <label for="Service" class="bb margin">Service :</label>
+                <select name="Service" id="Service" class="bb margin
+                    border">
+                    <option value="EnService">en service</option>
+                    <option value="HorsService">Hors service</option>
+                </select>
+                <label for="Conversion" class="bb margin">Conversion :</label>
+                <select name="Conversion" id="Conversion" class="bb margin
+                    border">
+                    <option value="Manuelle">Manuelle</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+                <label for="Pic" class="bb margin">Photo :</label>
+                <label for="actual-btn" class="bb margin label">Photo</label>
+                <input id="actual-btn" name="Pic" type="file" placeholder=" Model" class="bb
+                    margin
+                    border" hidden>
+                <input type="submit" value=" Valider " class="margin button
+                    bg-success text-white">
+            </form>
+        </div>
+        <script>
+            const actualBtn = document.getElementById('actual-btn');
+
+            const fileChosen = document.getElementById('file-chosen');
+
+            actualBtn.addEventListener('change', function(){
+            fileChosen.textContent = this.files[0].name
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <style>
+        table {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+         
+        table td, table th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        table tr:nth-child(even){background-color: #f2f2f2;}
+        table tr:hover {background-color: #ddd;}
+         
+        table th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #ff7b00;
+          color: white;
+        }
+        </style>
+</head>
+ 
+<body>
+    <h1 style="text-align: center;">User Data</h1>
+    <table class="output"></table>
+    <script>
+        const base = 'https://docs.google.com/spreadsheets/d/1z2T9t1Y7RSeHwZwBsgGYGpigoLMxtdpNeNm6w_O_DYQ/gviz/tq?&sheet=voitures';
+        //
+        const query = encodeURIComponent('Select A,B,C,D,E,F,G,H,I,J,K,L,M   ');
+        const url = base + '&tq=' + query;
+            fetch(url)
+            .then(res => res.text())
+            .then(rep =>{
+                const data = JSON.parse(rep.substr(47).slice(0,-2));
+                const lasrRow=data.table.rows.length-1
+                console.log (lasrRow)
+                console.log(data.table)
+                console.log("CIN:" + data.table.rows[lasrRow].c[0].v)
+                document.getElementById("cin").innerText=data.table.rows[lasrRow].c[0].v
+                console.log("Date Départ:" + data.table.rows[lasrRow].c[1].f)
+                document.getElementById("dateDepart").innerText=data.table.rows[lasrRow].c[1].f
+                console.log("Date fin:" + data.table.rows[lasrRow].c[2].f)
+                document.getElementById("dateFin").innerText=data.table.rows[lasrRow].c[2].f
+                console.log("Numéro des jours:" + data.table.rows[lasrRow].c[3].v)
+                document.getElementById("nbreJours").innerText=data.table.rows[lasrRow].c[3].v
+                console.log("Matricule de voiture:" + data.table.rows[lasrRow].c[4].v)
+                document.getElementById("matricule").innerText=data.table.rows[lasrRow].c[4].v
+                console.log("Prix total a payer:" + data.table.rows[lasrRow].c[5].v)
+                document.getElementById("total").innerText=data.table.rows[lasrRow].c[5].v + " Dh"
+                console.log("Prix Fournie:" + data.table.rows[lasrRow].c[6].v)
+                document.getElementById("Pfournie").innerText=data.table.rows[lasrRow].c[6].v
+                document.getElementById("reste").innerText=data.table.rows[lasrRow].c[5].v-data.table.rows[lasrRow].c[6].v + " Dh"
+                console.log("Mark Voiture:" + data.table.rows[lasrRow].c[7].v)
+                document.getElementById("MarkVoiture").innerText=data.table.rows[lasrRow].c[7].v
+                console.log("Nom client:" + data.table.rows[lasrRow].c[8].v)
+                document.getElementById("nomClient").innerText=data.table.rows[lasrRow].c[8].v
+                console.log("Tel Client:" + data.table.rows[lasrRow].c[9].v)
+                document.getElementById("telclient").innerText=data.table.rows[lasrRow].c[9].v
+            });
+    </script>
+</body>
+ 
+</html>
